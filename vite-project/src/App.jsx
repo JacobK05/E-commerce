@@ -14,13 +14,14 @@ function App() {
    <>
      <BrowserRouter>
                 <Nav />
+                <hr  className='line'/>
                 <Routes>
                     <Route exact path="/" element={<Body />} />
                     <Route path="/shop" element={<Shop />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/login" element={<Login />} />
-                    
                 </Routes>
+                
               
             </BrowserRouter>
 

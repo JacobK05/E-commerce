@@ -1,7 +1,10 @@
 import React from 'react'
-
+import Image from '../assets/image.png'
 export default function container() {
   return (
-    <div>container</div>
+    <div className='image-container'>
+     
+        
+    </div>
   )
 }
