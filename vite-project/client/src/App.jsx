@@ -5,6 +5,7 @@ import Body from './components/body'
 import Shop from './pages/shop'
 import Contact from './pages/contact'
 import Login from './pages/login'
+import Register from './pages/register'
 
 import './style.css'
 
@@ -20,6 +21,7 @@ function App() {
                     <Route path="/shop" element={<Shop />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
                 </Routes>
                 
               

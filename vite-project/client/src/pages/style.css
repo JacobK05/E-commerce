@@ -1,0 +1,97 @@
+.card-container {
+    display: flex;
+}
+.bottom-container{
+    display: flex;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    max-width: 300px;
+    text-align: center;
+    font-family: arial;
+    margin-top: 100px;
+    margin-left: 100px;
+    padding: 30px;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .btn {
+    border: none;
+    outline: 0;
+    margin: 5px;
+    padding: 10px;
+    color: white;
+    background-color: gray;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .btn:hover {
+    background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+  }
+
+  .contact-form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 200px;
+    align-items: center;
+}
+
+input {
+    
+    width: 35%;
+    height: 35px;
+    padding: 7px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(220, 220, 220);
+    background-color: white;
+   
+  }
+
+  textarea {
+    
+    max-width: 35%;
+    min-width: 35%;
+    width: 100%;
+    max-height: 100px;
+    min-height: 100px;
+    padding: 7px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(220, 220, 220);
+    background-color: white;
+
+   
+  }
+
+  label {
+    color: white;
+    padding: 10px;
+    margin-top: 1rem;
+    font-family: monospace;
+    font-size: 30px;
+  }
+
+  input[type="submit"] {
+    margin-top: 2rem;
+    cursor: pointer;
+    background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+    color: white;
+    border: none;
+  }
+
+  .input-btn:hover {
+   opacity: 0.9;
+}
