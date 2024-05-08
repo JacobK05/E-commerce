@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { useMutation } from '@apollo/client';
 import { ADD_PROFILE } from '../utils/mutations';
-
+import './form.css'
 
 export default function register() {
 
@@ -39,56 +39,61 @@ export default function register() {
   }
 
   return (
-    <main>
-      <div className='signup-container'>
-        <h1 className='signup'> Signup </h1>
-        <div className='card-body'>
+    
+    <div className="form-container">
+      <div className="card">
+        <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+        <div className="card-body">
           {data ? (
-          <p>
-            You are signed up head {''}
-            <Link to="/"> Back to the homepage.</Link>
-          </p>
-          ):( 
-          <form onSubmit={handleFormSubmit}>
-            <input 
-              className='form-input'
-              placeholder='Name:'
-              name='name'
-              type='text'
-              value={formState.name}
-              onChange={handleChange}
-            />
-            <input 
-              className='form-input'
-              placeholder='Email:'
-              name='email'
-              type='email'
-              value={formState.email}
-              onChange={handleChange}
-            />
-            <input 
-              className='form-input'
-              placeholder='******'
-              name='password'
-              type='password'
-              value={formState.password}
-              onChange={handleChange}
-            />
-            <button 
-              className='sign-btn'
-              style={{ cursor: 'pointer'}}
-              type='submit'
-            > 
-            Submit
-            </button>
-          </form>
+            <p>
+              Success! You may now head{' '}
+              <Link to="/">back to the homepage.</Link>
+            </p>
+          ) : (
+            <form onSubmit={handleFormSubmit}>
+              <input
+                className="form-input"
+                placeholder="Username:"
+                name="name"
+                type="text"
+                value={formState.name}
+                onChange={handleChange}
+              />
+              <input
+                className="form-input"
+                placeholder="Email"
+                name="email"
+                type="email"
+                value={formState.email}
+                onChange={handleChange}
+              />
+              <input
+                className="form-input"
+                placeholder="******"
+                name="password"
+                type="password"
+                value={formState.password}
+                onChange={handleChange}
+              />
+              <button
+                className="btn btn-block btn-info"
+                style={{ cursor: 'pointer' }}
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
           )}
+
           {error && (
-            <div className='error-msg'> {error.message} </div>
+            <div className="my-3 p-3 bg-danger text-white">
+              {error.message}
+            </div>
           )}
         </div>
       </div>
-    </main>
+    </div>
+  
 
   )
 }

@@ -9,7 +9,7 @@ export default function body() {
       <h1 className='body-h1'> Welcome </h1>
       <p className='body-p'> This is a e-commerce store made with react! </p>
       <Link to="/shop">
-      <button onClick  className='body-btn'> Shop</button>
+      <button onClick={() => handleClick()}  className='body-btn'> Shop</button>
       </Link>
     </div>
   )
