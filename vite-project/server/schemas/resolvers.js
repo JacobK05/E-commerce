@@ -26,10 +26,16 @@ const resolvers = {
         return { token, profile };
     },
     login: async (parent, {email, password }) => {
-        const profile = await Profile.findOne({ email });
+        const profile = await Profile.findOne({ email, password });
 
         if(!profile){
             throw AuthenticationError
+        }
+
+        const correctPw = await profile.isCorrectPassword(password);
+
+        if (!correctPw) {
+          throw AuthenticationError;
         }
 
         const token = signToken(profile)

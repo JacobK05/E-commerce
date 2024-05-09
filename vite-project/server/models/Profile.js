@@ -5,12 +5,11 @@ const profileSchema = new Schema({
   name: {
     type: String,
     required: true,
-    unique: true,
+
   },
   email: {
     type: String,
     required: true, 
-    unique: true,
     match: [/.+@.+\..+/, 'Must match an email address!'],
   },
   password: {
@@ -36,6 +35,6 @@ profileSchema.pre('save', async function (next) {
     return bcrypt.compare(password, this.password);
   };
 
-  const Profile = model('Profile'. profileSchema)
+  const Profile = model('Profile', profileSchema)
 
   module.exports = Profile;

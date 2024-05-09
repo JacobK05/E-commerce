@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './style.css'
 export default function shop() {
   return (
@@ -63,6 +64,17 @@ export default function shop() {
     <p>Some text about the jeans..</p>
     <p><button className='btn'>Add to Cart</button></p>
   </div>
+  </div>
+  <div className='page-btn'>
+    <Link to="/shop" >
+    <button className='pre-btn' style={{ cursor: 'pointer' }} > Previous </button>
+    
+    </Link>
+    <Link  to="/shop2">
+    <button className='next-btn' style={{ cursor: 'pointer' }} > Next </button>
+    
+    </Link>
+
   </div>
   </>
   )

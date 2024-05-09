@@ -97,3 +97,48 @@ input {
   .input-btn:hover {
    opacity: 0.9;
 }
+
+.page-btn {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 10px;
+  font-size: 30px;
+}
+
+.next-btn {
+  margin: 10px;
+  font-size: 18px;
+  text-align: center;
+  font-family: monospace;
+  background-color: white;
+  padding: 15px 32px;
+  border: 1px solid black ;
+  transition-duration: 0.4s;
+  background: linear-gradient(109.6deg, #c3cbdc 0%, #edf1f4 74%);
+
+}
+
+.pre-btn {
+  margin: 10px;
+  font-size: 18px;
+  text-align: center;
+  font-family: monospace;
+  background-color: white;
+  padding: 15px 32px;
+  border: 1px solid black ;
+  transition-duration: 0.4s;
+  background: linear-gradient(109.6deg, #c3cbdc 0%, #edf1f4 74%);
+  
+}
+
+.pre-btn:hover {
+  background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+  color: white;
+  border-radius: 5px;
+}
+.next-btn:hover {
+  background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+  color: white;
+  border-radius: 5px;
+}
